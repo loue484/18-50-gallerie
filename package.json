@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "node genere_index.js > index.html"
+    "clean": "rm -rf dist",
+    "build": "node genere_index.js > index.html",
+    "dist": "mkdir -p dist/node_modules/photoswipe/dist && mkdir dist/img && cp index.html style.css dist && cp -r node_modules/photoswipe/dist/* dist/node_modules/photoswipe/dist && cp -r img/* dist/img"
   },
   "dependencies": {
     "photoswipe": "^5.3.2"
