@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gallerie 18/50</title>
+    <title>{{ titre }}</title>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="./node_modules/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <h1>{{ titre }}</h1>
+    <p>{{ sousTitre }}</p>
     <div id="app">
         <div class="pswp-gallery" id="my-gallery">
             {% for image in images %}
-            <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
-               data-pswp-width="1875" data-pswp-height="2500">
-                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg" alt=""/>
+            <a href="{{ image.path }}" data-pswp-width="{{image.width}}" data-pswp-height="{{image.height}}">
+                <img src="{{ image.thumbnailPath }}" alt=""/>
             </a>
             {% endfor %}
         </div>

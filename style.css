@@ -1,0 +1,10 @@
+body {
+    background: black;
+    color: pink;
+}
+
+.pswp-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
