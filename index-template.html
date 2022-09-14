@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallerie 18/50</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="./node_modules/photoswipe/dist/photoswipe.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="pswp-gallery" id="my-gallery">
+            {% for image in images %}
+            <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"
+               data-pswp-width="1875" data-pswp-height="2500">
+                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg" alt=""/>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<script type="module">
+    import PhotoSwipeLightbox from './node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#my-gallery',
+        children: 'a',
+        pswpModule: () => import('./node_modules/photoswipe/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+</script>
+</html>
+
