@@ -6,7 +6,9 @@ Pour installer les dépendances :
 $ npm ci
 ```
 
-Pour générer `index.html`
+Ensuite copier les images de la galerie dans `src/img`
+
+Puis générer le site :
 
 ```shell
 $ npm run build
