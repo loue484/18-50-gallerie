@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf dist src/index.html .parcel-cache",
-    "dev": "node src/genere_index.js > src/index.html && parcel src/index.html",
+    "dev": "cd src && node genere_index.js > index.html && cd .. && parcel src/index.html",
     "build": "cd src && node genere_index.js > index.html && cd .. && parcel build src/index.html"
   },
   "dependencies": {

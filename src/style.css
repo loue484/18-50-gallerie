@@ -8,3 +8,8 @@ body {
     flex-wrap: wrap;
     gap: 2em;
 }
+
+.github-logo {
+    vertical-align: bottom;
+    margin-left: 1em;
+}
