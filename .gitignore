@@ -2,7 +2,9 @@
 node_modules
 /dist
 /img
-index.html
+src/index.html
+src/img
+.parcel-cache/
 
 # Editor directories and files
 .idea

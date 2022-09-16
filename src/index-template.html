@@ -3,7 +3,7 @@
 <head>
     <title>{{ titre }}</title>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="./node_modules/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -20,15 +20,6 @@
         </div>
     </div>
 </body>
-<script type="module">
-    import PhotoSwipeLightbox from './node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
-
-    const lightbox = new PhotoSwipeLightbox({
-        gallery: '#my-gallery',
-        children: 'a',
-        pswpModule: () => import('./node_modules/photoswipe/dist/photoswipe.esm.js')
-    });
-    lightbox.init();
-</script>
+<script src="./main.js" type="module"></script>
 </html>
 

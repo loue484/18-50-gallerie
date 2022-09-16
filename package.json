@@ -3,15 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "node genere_index.js > index.html",
-    "dist": "mkdir -p dist/node_modules/photoswipe/dist && mkdir dist/img && cp index.html style.css dist && cp -r node_modules/photoswipe/dist/* dist/node_modules/photoswipe/dist && cp -r img/* dist/img"
+    "clean": "rm -rf dist src/index.html .parcel-cache",
+    "dev": "node src/genere_index.js > src/index.html && parcel src/index.html",
+    "build": "cd src && node genere_index.js > index.html && cd .. && parcel build src/index.html"
   },
   "dependencies": {
     "photoswipe": "^5.3.2"
   },
   "devDependencies": {
     "swig": "^1.4.2",
-    "sharp": "^0.31.0"
+    "sharp": "^0.31.0",
+    "parcel": "^2.7.0"
   }
 }
